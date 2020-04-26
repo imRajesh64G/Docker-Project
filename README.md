@@ -45,14 +45,14 @@ This is my final project to setup *JOOMLA* WebApp using *Docker* under the mento
  ![final result](docker%20screenshots/12_final%20output.png)
  ## TROUBLESHOOT:
  * There might be possible it is not able to connect that might be due to FIREWALL . Use `#systemctl stop firewalld`. Again you want to start the service use `#systemctl start firewalld`. but, it is not good practice to stop firewall. Instead do this,
-  * Masquerading allows for docker ingress and egress 
+   * Masquerading allows for docker ingress and egress 
     `#firewall-cmd --zone=public --add-masquerade --permanent`
-  * Specifically allow incoming traffic on port 80/443 (nothing new here)
+   * Specifically allow incoming traffic on port 80/443 (nothing new here)
     `#firewall-cmd --zone=public --add-port=80/tcp`
     `#firewall-cmd --zone=public --add-port=443/tcp`
-  * Reload firewall to apply permanent rules
+   * Reload firewall to apply permanent rules
     `#firewall-cmd --reload`
-  * Restart docker 
+   * Restart docker 
     `#systemctl restart docker`
  * If JOOMLA WebApp is not opening on your desired port , maybe due to **iptables** . Use `#iptables -P FORWARD ACCEPT` .
  
