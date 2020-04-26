@@ -9,6 +9,7 @@ This is my final project to setup *JOOMLA* WebApp using *Docker* under the mento
 ## 2. Download required docker images:
 * Pull MySQL image:
   * Use `#docker pull mysql:5.7` to download **mysql version 5.7** image to use as database server.
+* Pull JOOMLA image:
   * Use `#docker pull joomla:3.9-php7.2-apache` to download **joomla image** with php and apache web server already configured.
   * *to know more go to page: https://hub.docker.com/ 
 ## 3. Create a seperate volume for storage and start MySQL in one container:
